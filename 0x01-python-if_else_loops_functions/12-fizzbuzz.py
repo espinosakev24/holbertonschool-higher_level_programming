@@ -9,7 +9,7 @@ def fizzbuzz():
                 if not(a == 100):
                     print("Buzz, ", end="")
                 else:
-                    print("Buzz")
+                    print("Buzz" end="")
             elif a % 3 == 0:
                 print("Fizz, ", end="")
             else:
