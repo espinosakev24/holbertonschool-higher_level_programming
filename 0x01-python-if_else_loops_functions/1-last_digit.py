@@ -5,14 +5,14 @@ if number > 0:
     mod = number % 10
 else:
     mod = number % -10
+s = "Last digit of"
+s2 = "and is less than 6 and not 0"
+s3 = "and is greater than 5"
 if mod > 5:
-    print('Last digit of {:d} is {:d} and\
-is greater than 5'.format(number, number % 10))
+    print('{:s} {:d} is {:d} {:s}'.format(s, number, number % 10, s3))
 elif mod == 0:
-    print('Last digit of {:d} is {:d} and is 0'.format(number, number % 10))
+    print('{:s} {:d} is {:d} and is 0'.format(s, number, number % 10))
 elif mod > 0 and mod < 6:
-    print('Last digit of {:d} is {:d} and\
-is less than 6 and not 0'.format(number, number % 10))
+    print('{:s} {:d} is {:d} {:s}'.format(s, number, number % 10, s2))
 elif mod < 0:
-    print('Last digit of {:d} is {:d} and\
-is less than 6 and not 0'.format(number, number % -10))
+    print('{:s} {:d} is {:d} {:s}'.format(s, number, number % -10, s2))
