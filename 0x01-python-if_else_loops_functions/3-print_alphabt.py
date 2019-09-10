@@ -4,4 +4,4 @@ for n in range(0x61, 123):
         continue
     elif n == 102:
         continue
-    print(chr(n), end="")
+    print('{:s}'.format(chr(n)), end="")
