@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import easyprint
-easyprint.printp()
+import os
+os.system("echo '#pythoniscool'")
