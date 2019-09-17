@@ -8,6 +8,3 @@ def no_c(my_string):
         string = string + n
         a += 1
     return string
-print(no_c("Holberton School"))
-print(no_c("Chicago"))
-print(no_c("C is fun!"))
