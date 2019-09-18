@@ -1,5 +1,5 @@
-#ifndef HOLBERTON
-#define HOLBERTON
+#ifndef LISTS_H
+#define LISTS_H
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -16,11 +16,12 @@ typedef struct listint_s
 	int n;
 	struct listint_s *next;
 } listint_t;
-int is_palindrome(listint_t **head);
-char *rev_str(char *string);
+
 size_t print_listint(const listint_t *h);
 listint_t *add_nodeint_end(listint_t **head, const int n);
 void free_listint(listint_t *head);
 int _strcmp(char *s1, char *s2);
+char *rev_str(char *string);
 int _strlen(char *s);
-#endif
+int is_palindrome(listint_t **head);
+#endif /* LISTS_H */
