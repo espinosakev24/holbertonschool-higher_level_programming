@@ -7,12 +7,14 @@
 int is_palindrome(listint_t **head)
 {
 	int list_len = 0;
-	listint_t  *href = malloc(sizeof(listint_t));
+	listint_t  *href;
+	char list_values[999], /**elements,*/ *rev_elements;
 
+	if ((*head != NULL) || (head != NULL))
+		return (1);
 	href = *head;
-
-	char list_values[100], /**elements,*/ *rev_elements;
-
+	if (href->next == NULL)
+		return (1);
 	while (href != NULL)
 	{
 		list_values[list_len] = href->n;
@@ -22,10 +24,11 @@ int is_palindrome(listint_t **head)
 	if (list_len == 0)
 		return (1);
 	rev_elements = rev_str(list_values);
-	if (strcmp(rev_elements, list_values) == 0)
+	if (_strcmp(rev_elements, list_values) == 0)
 		return (1);
-	else
+	if (_strcmp(rev_elements, list_values) != 0)
 		return (0);
+	return (0);
 }
 	/*
 	*if (list_len % 2 == 0)
