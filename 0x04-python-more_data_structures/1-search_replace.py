@@ -9,5 +9,4 @@ def search_replace(my_list, search, replace):
             new.append(replace)
         new.append(cpy[n])
         n += 1
-    new.append(replace)
     return new
