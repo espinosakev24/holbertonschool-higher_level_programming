@@ -2,7 +2,8 @@
 def safe_print_integer_err(value):
     try:
         print('{:d}'.format(value))
+        return True
     except Exception as a:
-        eprint('Exception: {}'.format(a))
+        import sys
+        sys.stderr.write('Exception: {}\n'.format(a))
         return False
-    return True
