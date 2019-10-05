@@ -1,0 +1,40 @@
+Module say_my_name
+======================
+
+Using say_my_name function
+-------------------
+    1) Importing success
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+    2)  Testing first and last name
+    >>> say_my_name('Kevin', 'Espinosa')
+    My name is Kevin Espinosa
+
+    3) Test errors:
+    >>> say_my_name(3, 'Espinosa')
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    4) last_name error
+    >>> say_my_name("Kevin", 3)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    5) If a list have a name
+    >>> say_my_name(["Kevin"], "Espinosa")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    6) If a list have a the last name
+    >>> say_my_name("Kevin", ["Espinosa"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    7) only one parameter
+    >>> say_my_name("Kevin")
+    My name is Kevin 
+
+    8) No name but last_name
+    >>> say_my_name("", "Espinosa")
+    My name is  Espinosa
+

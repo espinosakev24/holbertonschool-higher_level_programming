@@ -1,0 +1,6 @@
+Print_square - module
+======================
+Use - function that prints a square
+-------------------
+    1) Importing success
+    print_square = __import__('4-print_square').print_square:

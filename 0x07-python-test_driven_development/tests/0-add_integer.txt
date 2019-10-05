@@ -1,0 +1,72 @@
+The ``add`` module
+======================
+
+Using ``add_integer``
+-------------------
+    1) Importing success
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+    2) test: two integers
+    >>> add_integer(3, 3)
+    6
+
+    3) test: a parameter as a char
+    >>> add_integer('h', 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    4) test: b parameter as a char
+    >>> add_integer(4, 'h')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    5) test: addition between float and int
+    >>> add_integer(3.3, 4)
+    7
+
+    6) test: only 1 parameter
+    >>> add_integer(3)
+    101
+
+    7) test: b is a float
+    >>> add_integer(4, 3.333)
+    7
+
+    8) test: b is a float
+    >>> add_integer(3d3, 2b2)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+    9) negative addition:
+    >>> add_integer(-3, -3)
+    -6
+
+    10) a or b is a tuple
+    >>> add_integer((4,), 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(4, (4,))
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+
+    11) positive and negatives
+    >>> add_integer(-3, 4)
+    1
+
+    >>> add_integer(3, -4)
+    -1
+
+    12) testing return type
+    >>> type(add_integer(3.3, 4))
+    <class 'int'>
+
+    13) Testing a and b float
+    >>> add_integer(3.1, 3.1)
+    6
+
+    14) testing return type of a and b float
+    >>> type(add_integer(3.1, 3.1))
+    <class 'int'>
