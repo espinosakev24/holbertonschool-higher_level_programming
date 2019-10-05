@@ -10,6 +10,8 @@ def text_indentation(text):
     """
     function that change char for breakline
     """
+    if not isinstance(text, str):
+        raise TypeError('text must be a string')
     s1 = text.replace('.', '.\n\n')
     s2 = s1.replace('?', '?\n\n')
     s3 = s2.replace(':', ':\n\n')
@@ -21,3 +23,5 @@ def text_indentation(text):
         if i == new[-1] and i != ':' and i != '.' and i != '?':
             break
         print('\n')
+
+text_indentation("kevin?espinosa.")

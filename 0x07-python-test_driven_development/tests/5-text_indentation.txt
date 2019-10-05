@@ -1,0 +1,10 @@
+Text indentation
+======================
+
+Use - Function that prints breaklines when ?, . and : chars occurs
+-------------------
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    >>> text_indentation("kevin?espinosa")
+    kevin?
+    <BLANKLINE>
