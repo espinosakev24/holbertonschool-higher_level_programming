@@ -1,8 +1,14 @@
 #!/usr/bin/python3
 """
+    say_my_name module
+    function that says a name
+    prints the a name and a last name
 """
+
+
 def say_my_name(first_name, last_name=""):
     """
+    say_my_name
     """
     if type(first_name) is not str:
         raise TypeError('first_name must be a string')
