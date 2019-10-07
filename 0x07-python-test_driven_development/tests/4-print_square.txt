@@ -5,26 +5,29 @@ Use - function that prints a square
     1) Importing success
     >>> print_square = __import__('4-print_square').print_square
 
+    2) size is less than 0
     >>> print_square(-3)
     Traceback (most recent call last):
     TypeError: size must be >= 0
 
-    >>> print_square(-3)
+    3) size is a string
+    >>> print_square('hello')
     Traceback (most recent call last):
-    TypeError: size must be >= 0
+    TypeError: size must be an integer
 
-    >>> print_square(-3)
+    4) size is a float number
+    >>> print_square(4.5)
     Traceback (most recent call last):
-    TypeError: size must be >= 0
+    TypeError: size must be an integer
 
-    >>> print_square(-3)
+    5) Empty function
+    >>> print_square()
     Traceback (most recent call last):
-    TypeError: size must be >= 0
+    TypeError: print_square() missing 1 required positional argument: 'size'
 
-    >>> print_square(-3)
-    Traceback (most recent call last):
-    TypeError: size must be >= 0
+    6) printing normally a square
+    >>> print_square(3)
+    ###
+    ###
+    ###
 
-    >>> print_square(-3)
-    Traceback (most recent call last):
-    TypeError: size must be >= 0
