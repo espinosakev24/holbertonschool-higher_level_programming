@@ -43,7 +43,10 @@ class Rectangle(Base):
 
     """ task 5 --> display function """
     def display(self):
+        for c in range(0, self.__y):
+            print()
         for a in range(0, self.__height):
+            print(self.__x * " ", end="")
             for b in range(0, self.__width):
                 print('#', end="")
             print()
@@ -53,6 +56,46 @@ class Rectangle(Base):
         return '[{}] ({:d}) {:d}/{:d} - {:d}/{:d}'\
             .format(self.__class__.__name__,
                     self.id, self.__x, self.__y, self.__width, self.__height)
+
+    """ task --> 8 update #0 """
+    """ task --> 9 update #1 """
+    def update(self, *args, **kwargs):
+        len_ags = len(args)
+        for d in range(0, len_ags):
+            if d > len_ags:
+                break
+            if len_ags == 1:
+                self.id = args[0]
+            elif len_ags == 2:
+                self.id = args[0]
+                self.__width = args[1]
+            elif len_ags == 3:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+            elif len_ags == 4:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+            elif len_ags == 5:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+        if not args:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                if key == 'width':
+                    self.__width = value
+                if key == 'height':
+                    self.__height = value
+                if key == 'x':
+                    self.__x = value
+                if key == 'y':
+                    self.__y = value
 
     """setting x"""
     @property
