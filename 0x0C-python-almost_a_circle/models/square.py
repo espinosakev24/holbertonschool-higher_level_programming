@@ -40,7 +40,7 @@ class Square(Rectangle):
             elif len_ags == 3:
                 self.id = args[0]
                 self.size = args[1]
-                self.__x = args[2]
+                self.x = args[2]
             elif len_ags == 4:
                 self.id = args[0]
                 self.size = args[1]
@@ -53,7 +53,10 @@ class Square(Rectangle):
                 if key == 'size':
                     self.size = value
                 if key == 'x':
-                    self.__x = value
+                    self.x = value
                 if key == 'y':
-                    self.__y = value
-        
+                    self.y = value
+
+    """ task 14 --> dictionary representation of a square """
+    def to_dictionary(self):
+        return {"id": self.id, "x": self.x, "size": self.size, "y": self.y}

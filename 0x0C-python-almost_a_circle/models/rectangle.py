@@ -56,7 +56,6 @@ class Rectangle(Base):
         return '[{}] ({:d}) {:d}/{:d} - {:d}/{:d}'\
             .format(self.__class__.__name__,
                     self.id, self.__x, self.__y, self.__width, self.__height)
-
     """ task --> 8 update #0 """
     """ task --> 9 update #1 """
     def update(self, *args, **kwargs):
@@ -96,6 +95,10 @@ class Rectangle(Base):
                     self.__x = value
                 if key == 'y':
                     self.__y = value
+
+    """ task --> 13 dictionary definition of rectangle """
+    def to_dictionary(self):
+        return {"x": self.__x, "y": self.__y, "id": self.id, "height": self.__height, "width": self.__width}
 
     """setting x"""
     @property
