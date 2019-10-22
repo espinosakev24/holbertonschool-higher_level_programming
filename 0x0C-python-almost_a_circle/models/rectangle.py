@@ -1,48 +1,60 @@
 #!/usr/bin/python3
-"""Module of first rectangle"""
+"""Module of first rectangle
+"""
+
+
 from models.base import Base
 
 
 class Rectangle(Base):
+    """ Class Rectangle
+    """
+
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Contructor
+        """
         super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
 
-    """setting widht"""
     @property
     def width(self):
+        """setting widht"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """setting height"""
         if type(value) is not int:
             raise TypeError('width must be an integer')
         if value <= 0:
             raise ValueError('width must be > 0')
         self.__width = value
 
-    """setting height"""
     @property
     def height(self):
+        """ Height getter
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """ setter of height
+        """
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value <= 0:
             raise ValueError('height must be > 0')
         self.__height = value
 
-    """ task 4 --> rectangle area """
     def area(self):
+        """ task 4 --> rectangle area """
         return self.__height * self.__width
 
-    """ task 5 --> display function """
     def display(self):
+        """ task 5 --> display function """
         for c in range(0, self.__y):
             print()
         for a in range(0, self.__height):
@@ -51,14 +63,14 @@ class Rectangle(Base):
                 print('#', end="")
             print()
 
-    """ task 6 --> __str__ function """
     def __str__(self):
+        """ task 6 --> __str__ function """
         return '[{}] ({:d}) {:d}/{:d} - {:d}/{:d}'\
             .format(self.__class__.__name__,
                     self.id, self.__x, self.__y, self.__width, self.__height)
-    """ task --> 8 update #0 """
-    """ task --> 9 update #1 """
+
     def update(self, *args, **kwargs):
+        """ task --> 9 update #1 """
         len_ags = len(args)
         for d in range(0, len_ags):
             if d > len_ags:
@@ -96,31 +108,33 @@ class Rectangle(Base):
                 if key == 'y':
                     self.__y = value
 
-    """ task --> 13 dictionary definition of rectangle """
     def to_dictionary(self):
+        """ task --> 13 dictionary definition of rectangle """
         return ({"x": self.__x, "y": self.__y, "id": self.id,
                 "height": self.__height, "width": self.__width})
 
-    """setting x"""
     @property
     def x(self):
+        """setting x"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """ Setter of x """
         if type(value) is not int:
             raise TypeError('x must be an integer')
         if value < 0:
             raise ValueError('x must be >= 0')
         self.__x = value
 
-    """setting y"""
     @property
     def y(self):
+        """setting y"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """setting y"""
         if type(value) is not int:
             raise TypeError('y must be an integer')
         if value < 0:
