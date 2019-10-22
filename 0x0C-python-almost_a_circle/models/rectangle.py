@@ -98,7 +98,8 @@ class Rectangle(Base):
 
     """ task --> 13 dictionary definition of rectangle """
     def to_dictionary(self):
-        return {"x": self.__x, "y": self.__y, "id": self.id, "height": self.__height, "width": self.__width}
+        return ({"x": self.__x, "y": self.__y, "id": self.id,
+                "height": self.__height, "width": self.__width})
 
     """setting x"""
     @property
