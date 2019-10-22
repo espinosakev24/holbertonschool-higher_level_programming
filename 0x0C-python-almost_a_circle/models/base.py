@@ -35,13 +35,12 @@ class Base:
         """ Task --> 16 Json string to file """
         new = []
         arch = cls.__name__ + ".json"
-        with open(arch, "w", encoding="utf-8") as fd:
-            if list_objs == [] or list_objs is None:
-                fd.write(json.dumps(new))
+        if list_objs is not None:
             for a in list_objs:
                 new.append(cls.to_dictionary(a))
-            content = cls.to_json_string(new)
-            fd.write(content)
+
+        with open(arch, "w", encoding="utf-8") as fd:
+            fd.write(cls.to_json_string(new))
 
     @staticmethod
     def from_json_string(json_string):
