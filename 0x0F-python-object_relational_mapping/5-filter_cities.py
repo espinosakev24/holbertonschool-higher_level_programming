@@ -17,6 +17,7 @@ if __name__ == '__main__':
     for data in result:
         if len(result) == 0:
             print()
+            break
         if (len(result) - 1 == n):
             print(data[0])
         else:
