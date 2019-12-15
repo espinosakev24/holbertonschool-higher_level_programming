@@ -14,13 +14,8 @@ if __name__ == '__main__':
                 " ORDER BY cities.id ASC", (argv[4],))
 
     result = cur.fetchall()
+    it = ''
     for data in result:
-        if len(result) == 0:
-            print()
-            break
-        if (len(result) - 1 == n):
-            print(data[0])
-        else:
-            print(data[0] + ", ", end="")
-        n += 1
+        it += data[0] + ', '
+    print(it[:-2])
     db.close()
