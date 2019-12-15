@@ -15,7 +15,9 @@ if __name__ == '__main__':
 
     result = cur.fetchall()
     for data in result:
-        if (len(result) > 0 and len(result) - 1 == n):
+        if len(result) == 0:
+            print()
+        if (len(result) - 1 == n):
             print(data[0])
         else:
             print(data[0] + ", ", end="")
