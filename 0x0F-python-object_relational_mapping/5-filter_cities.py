@@ -10,11 +10,12 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute("SELECT cities.name FROM cities"
                 " INNER JOIN states ON states.id = cities.state_id"
-                " WHERE states.name = %s ORDER BY cities.id ASC", (argv[4],))
+                " WHERE states.name LIKE BINARY %s"
+                " ORDER BY cities.id ASC", (argv[4],))
 
     result = cur.fetchall()
     for data in result:
-        if (len(result) - 1 == n):
+        if (len(result) > 0 and len(result) - 1 == n):
             print(data[0])
         else:
             print(data[0] + ", ", end="")
