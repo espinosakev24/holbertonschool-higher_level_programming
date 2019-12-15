@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     db = sql.connect(host="localhost", db=a3, user=a1, passwd=a2, port=3306)
     cur = db.cursor()
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id"
+    query = "SELECT * FROM states WHERE name LIKE '{}' ORDER BY states.id"
     cur.execute(query.format(argv[4]))
     for data in cur.fetchall():
         print(data)
