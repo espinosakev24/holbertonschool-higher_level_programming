@@ -8,8 +8,8 @@ if __name__ == '__main__':
 
     db = sql.connect(host="localhost", db=a3, user=a1, passwd=a2, port=3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id"
+    cur.execute(query.format(argv[4]))
     for data in cur.fetchall():
-        if data[1] == argv[4]:
-            print(data)
+        print(data)
     db.close()
