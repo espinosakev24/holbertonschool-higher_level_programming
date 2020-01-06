@@ -1,3 +1,3 @@
 #!/bin/bash
-# Request to a URL and printing only de content size in bytes.
-curl -s $1
+# GET Body only with 200 status code
+curl -s -L -X GET  $1
