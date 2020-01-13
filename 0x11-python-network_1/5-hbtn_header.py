@@ -3,5 +3,5 @@
 import requests
 from sys import argv
 if __name__ == "__main__":
-    req = requests.get('https://intranet.hbtn.io/status')
+    req = requests.get('https://intranet.hbtn.io')
     print(req.headers.get('X-Request-Id'))
