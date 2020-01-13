@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that displays the value of the X-Request-Id
+Script that sends a POST request to the
+passed URL with the email as a parameter,
 """
 import urllib.parse
 import urllib.request
