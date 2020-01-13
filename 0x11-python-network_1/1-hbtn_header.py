@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that displays the value of the X-Request-Id
+Script that displays the value
+of the X-Request-Id.
 """
 import urllib.request
 import sys
