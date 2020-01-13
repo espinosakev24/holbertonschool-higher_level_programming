@@ -9,3 +9,4 @@ with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
     print("\t- content: {}".format(body))
     print("\t- utf8 content: {}".format(body.decode('utf-8')))
     response.close()
+    
