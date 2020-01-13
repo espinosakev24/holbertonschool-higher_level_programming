@@ -2,5 +2,6 @@
 # Script that fetches an URL using requests
 import requests
 from sys import argv
-req = requests.get('https://intranet.hbtn.io/status')
-print(req.headers['X-Request-Id'])
+if __name__ == "__main__":
+    req = requests.get('https://intranet.hbtn.io/status')
+    print(req.headers.get('X-Request-Id'))
