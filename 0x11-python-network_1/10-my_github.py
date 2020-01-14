@@ -13,6 +13,6 @@ if __name__ == "__main__":
     password = argv[2]
     try:
         req = requests.get(url, auth=(username, password))
-        print(req.json()[0].get('id'))
+        print(req.json().get('id'))
     except Exception:
         print(None)
