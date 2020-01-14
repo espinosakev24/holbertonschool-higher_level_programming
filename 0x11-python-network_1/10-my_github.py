@@ -5,7 +5,6 @@ script that takes your Github credentials
 API to display your id
 """
 from sys import argv
-from requests.auth import HTTPBasicAuth
 import requests
 
 if __name__ == "__main__":
