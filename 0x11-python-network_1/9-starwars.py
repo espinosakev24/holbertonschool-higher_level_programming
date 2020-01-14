@@ -6,9 +6,8 @@ a search request to the Star Wars API
 from sys import argv
 import requests
 
-
-req = requests.get("https://swapi.co/api/people/?search={}".format(argv[1]))
-req_json = req.json()
-print("Number of results: {}".format(req_json['count']))
-for data in req_json['results']:
+url = "https://swapi.co/api/people/?search={}".format(argv[1])
+req = requests.get(url).json()
+print("Number of results: {}".format(req['count']))
+for data in req['results']:
     print("{}".format(data['name']))
