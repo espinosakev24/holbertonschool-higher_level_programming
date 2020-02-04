@@ -5,6 +5,6 @@ if (isNaN(times)) {
 }
 let n = 0;
 while (n < times) {
-  console.log('x'.repeat(times));
   n++;
+  console.log('X'.repeat(times));
 }
