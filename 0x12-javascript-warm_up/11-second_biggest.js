@@ -9,7 +9,7 @@ if (arr.length === 0 || arr.length === 1) {
   const max = Math.max.apply(Math, arr);
   arr.splice(arr.indexOf(max));
   if (arr.length === 0) {
-    console.log(undefined);
+    console.log(max);
   } else {
     console.log(Math.max.apply(Math, arr));
   }
