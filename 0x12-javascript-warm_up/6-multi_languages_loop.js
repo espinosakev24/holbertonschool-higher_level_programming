@@ -1,7 +1,5 @@
 #!/usr/bin/node
-const C = 'C is fun'; const P = 'Python is cool';
-const J = 'Javascript is amazing';
-const arr = [C, P, J];
+const arr = ['C is fun', 'Python is cool', 'Javascript is amazing'];
 arr.forEach((value) => {
   console.log(`${value}`);
 });
