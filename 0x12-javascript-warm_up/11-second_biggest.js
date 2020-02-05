@@ -8,6 +8,7 @@ if (arr.length === 0 || arr.length === 1) {
   if (arr.length === 0) {
     console.log(max);
   } else {
-    console.log(Math.max.apply(Math, arr));
+    let resutl = Math.max.apply(Math, arr);
+    console.log(String(resutl));
   }
 }
