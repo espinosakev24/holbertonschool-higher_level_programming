@@ -1,16 +1,13 @@
 #!/usr/bin/node
-let arr = process.argv.slice(2);
+const arr = process.argv.slice(2).map(x => parseInt(x));
 if (arr.length === 0 || arr.length === 1) {
-  console.log(String(0));
+  console.log(0);
 } else {
-  arr = arr.map(function (x) {
-    return Number(x);
-  });
-  const max = Math.max.apply(Math, arr);
-  arr.splice(arr.indexOf(max));
+  const max = Math.max(...arr);
+  arr.splice(arr.indexOf(max), 1);
   if (arr.length === 0) {
-    console.log(String(max));
+    console.log(max);
   } else {
-    console.log(String(Math.max.apply(Math, arr)));
+    console.log(Math.max(...arr));
   }
 }
