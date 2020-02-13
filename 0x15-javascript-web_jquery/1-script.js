@@ -1,1 +1,2 @@
-$("header").css({'background': '#FF0000'});
+const $ = window.$;
+$('header').css({ background: '#FF0000' });
