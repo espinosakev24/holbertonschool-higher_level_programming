@@ -7,6 +7,6 @@ Array.from(new Set(Object.values(d))).forEach(i => {
     return;
 });
 for (const n in d) {
-    dictKeys[d[n]].push(n);
+  dictKeys[d[n]].push(n);
 }
 console.log(dictKeys);
